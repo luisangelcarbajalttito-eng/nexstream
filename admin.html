@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Admin Nexstream</title>
+
+<style>
+
+body{
+font-family:Arial;
+background:#0b0b0b;
+color:white;
+padding:40px;
+}
+
+h1{
+color:red;
+}
+
+.card{
+background:#141414;
+padding:20px;
+margin:10px 0;
+border-radius:8px;
+}
+
+button{
+background:red;
+color:white;
+border:none;
+padding:10px;
+border-radius:6px;
+cursor:pointer;
+}
+
+input{
+padding:10px;
+margin:5px;
+border-radius:5px;
+border:none;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>Panel Admin Nexstream</h1>
+
+<div class="card">
+
+<h3>Agregar saldo a usuario</h3>
+
+<input id="usuario" placeholder="Correo usuario">
+
+<input id="saldo" placeholder="Monto">
+
+<button onclick="agregarSaldo()">Agregar saldo</button>
+
+</div>
+
+<div class="card">
+
+<h3>Usuarios registrados</h3>
+
+<div id="lista"></div>
+
+</div>
+
+<script>
+
+function agregarSaldo(){
+
+let usuario=document.getElementById("usuario").value;
+let saldo=document.getElementById("saldo").value;
+
+localStorage.setItem("saldo_"+usuario,saldo);
+
+alert("Saldo agregado");
+
+}
+
+function cargarUsuarios(){
+
+let usuario=localStorage.getItem("usuario");
+
+document.getElementById("lista").innerHTML="Usuario: "+usuario;
+
+}
+
+cargarUsuarios();
+
+</script>
+
+</body>
+  </html>
