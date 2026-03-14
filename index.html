@@ -2,34 +2,119 @@
 <html>
 <head>
 <title>Nexstream</title>
+
 <style>
+
 body{
 background:#0f0f0f;
 color:white;
 font-family:Arial;
-text-align:center;
-padding-top:100px;
+margin:0;
 }
+
+header{
+background:black;
+padding:20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+font-size:28px;
+color:red;
+font-weight:bold;
+}
+
+.container{
+padding:40px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+}
+
+.card{
+background:#1a1a1a;
+padding:20px;
+border-radius:10px;
+text-align:center;
+}
+
+.card img{
+width:100px;
+margin-bottom:10px;
+}
+
+.price{
+color:#00ff88;
+font-size:18px;
+margin:10px 0;
+}
+
 button{
 background:red;
-color:white;
 border:none;
-padding:15px 30px;
-font-size:18px;
-border-radius:8px;
+padding:10px 20px;
+color:white;
+border-radius:6px;
 cursor:pointer;
 }
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+padding:15px;
+border-radius:50%;
+font-size:20px;
+}
+
 </style>
 </head>
 
 <body>
 
-<h1>Nexstream</h1>
-<p>Plataforma de venta de servicios de streaming</p>
+<header>
+<div class="logo">Nexstream</div>
+<div>Plataforma de streaming</div>
+</header>
 
-<button onclick="window.location.href='https://wa.me/51967787059'">
-Contactar por WhatsApp
-</button>
+<div class="container">
+
+<h2>Servicios disponibles</h2>
+
+<div class="grid">
+
+<div class="card">
+<img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg">
+<h3>Netflix Premium</h3>
+<div class="price">S/ 15</div>
+<button>Comprar</button>
+</div>
+
+<div class="card">
+<img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Disney%2B_logo.svg">
+<h3>Disney Plus</h3>
+<div class="price">S/ 10</div>
+<button>Comprar</button>
+</div>
+
+<div class="card">
+<img src="https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg">
+<h3>Spotify Premium</h3>
+<div class="price">S/ 8</div>
+<button>Comprar</button>
+</div>
+
+</div>
+
+</div>
+
+<a class="whatsapp" href="https://wa.me/51967787059">💬</a>
 
 </body>
-</html>
+  </html>
