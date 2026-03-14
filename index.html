@@ -27,25 +27,9 @@ font-weight:bold;
 color:red;
 }
 
-.search{
-padding:10px;
-width:250px;
-border-radius:5px;
-border:none;
-}
-
 .banner{
-background:linear-gradient(90deg,#000,#111);
 padding:80px 40px;
-}
-
-.banner h1{
-font-size:40px;
-margin-bottom:10px;
-}
-
-.banner p{
-color:#aaa;
+background:linear-gradient(90deg,#000,#111);
 }
 
 .container{
@@ -63,16 +47,11 @@ background:#141414;
 border-radius:10px;
 padding:20px;
 text-align:center;
-transition:0.3s;
-}
-
-.card:hover{
-transform:scale(1.05);
 }
 
 .card img{
 width:120px;
-margin-bottom:15px;
+margin-bottom:10px;
 }
 
 .price{
@@ -90,10 +69,6 @@ border-radius:6px;
 cursor:pointer;
 }
 
-button:hover{
-background:#ff2a2a;
-}
-
 .whatsapp{
 position:fixed;
 bottom:20px;
@@ -106,46 +81,64 @@ font-size:22px;
 text-decoration:none;
 }
 
-footer{
-text-align:center;
-padding:30px;
-color:#777;
-}
-
 </style>
 </head>
 
 <body>
 
 <header>
-
 <div class="logo">Nexstream</div>
-
-<input class="search" placeholder="Buscar servicio...">
-
 </header>
 
-
 <div class="banner">
-
-<h1>Plataforma de Streaming</h1>
-<p>Compra cuentas de streaming al mejor precio</p>
-
+<h1>Servicios de Streaming</h1>
+<p>Compra cuentas al mejor precio</p>
 </div>
 
-
 <div class="container">
-
-<h2>Servicios populares</h2>
 
 <div class="grid">
 
 <div class="card">
 <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg">
 <h3>Netflix Premium</h3>
-<div class="price">S/ 15</div>
-<button>Comprar</button>
+<div class="price">S/15</div>
+<button onclick="comprar('Netflix Premium')">Comprar</button>
 </div>
 
 <div class="card">
-<img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Disney%2
+<img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Disney%2B_logo.svg">
+<h3>Disney+</h3>
+<div class="price">S/10</div>
+<button onclick="comprar('Disney Plus')">Comprar</button>
+</div>
+
+<div class="card">
+<img src="https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg">
+<h3>Spotify Premium</h3>
+<div class="price">S/8</div>
+<button onclick="comprar('Spotify Premium')">Comprar</button>
+</div>
+
+</div>
+
+</div>
+
+<a class="whatsapp" href="https://wa.me/51967787059">💬</a>
+
+<script>
+
+function comprar(servicio){
+
+let mensaje = "Hola quiero comprar: " + servicio;
+
+let url = "https://wa.me/51967787059?text=" + encodeURIComponent(mensaje);
+
+window.open(url);
+
+}
+
+</script>
+
+</body>
+</html>
